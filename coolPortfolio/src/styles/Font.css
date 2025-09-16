@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Flaviotte';
+  src: url('/fonts/Flaviotte.woff2') format('woff2'),
+       url('/fonts/Flaviotte.woff') format('woff'),
+       url('/fonts/Flaviotte.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'MilkyWalky';
+  src: url('/fonts/MilkyWalky-Regular.otf') format('opentype'),
+       url('/fonts/MilkyWalky-Regular.woff') format('woff'),
+       url('/fonts/MilkyWalky-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
