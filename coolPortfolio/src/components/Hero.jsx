@@ -1,4 +1,8 @@
-function scrollToProjects() {}
+
+function scrollToProjects() {
+  const projectsGrid = document.getElementById('projectsGrid');
+  projectsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 function Hero() {
   return (
@@ -17,8 +21,8 @@ function Hero() {
       </p>
       <div className="absolute bottom-2 left-0 right-0 flex justify-center">
         <button
-          onClick={scrollToProjects}
-          className="bg-transparent font-thin text-[#890008] hover:text-[#db525b] active:scale-95 text-xs  cursor-pointer transition-all duration-150"
+          onClick={scrollToProjects} id="projectsGrid"
+          className="bg-transparent font-normal text-[#890008] hover:text-[#db525b] active:scale-95 text-[10px] xs:text-xs sm:text-xs cursor-pointer transition-all duration-150"
         >
           SELECTED PROJECTS
         </button>
