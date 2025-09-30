@@ -1,8 +1,10 @@
+import { FaLongArrowAltDown } from "react-icons/fa";
 
 function scrollToProjects() {
-  const projectsGrid = document.getElementById('projectsGrid');
-  projectsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const projectsGrid = document.getElementById('selected-projects');
+  projectsGrid.scrollIntoView({ behavior: 'smooth' });
 }
+
 
 function Hero() {
   return (
@@ -21,14 +23,13 @@ function Hero() {
       </p>
       <div className="absolute bottom-2 left-0 right-0 flex justify-center">
         <button
-          onClick={scrollToProjects} id="projectsGrid"
-          className="bg-transparent font-normal text-[#890008] hover:text-[#db525b] active:scale-95 text-[10px] xs:text-xs sm:text-xs cursor-pointer transition-all duration-150"
-        >
-          SELECTED PROJECTS
+          onClick={scrollToProjects}
+        ><FaLongArrowAltDown size={24} className="animate-pulse text-pink-500 hover:text-black-400 transition-colors duration-150" />
         </button>
       </div>
     </div>
   );
 }
+
 
 export default Hero;

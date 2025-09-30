@@ -1,5 +1,5 @@
 import hyperBoxImage from "../assets/projects/HyperBox/hyperBoxPB.jpg";
-import eieioImage from "../assets/projects/EIEIO/eieioPB.jpg";
+import eieioImage from "../assets/projects/EIEIO/eieioPB.jpeg";
 import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/vaerdicentralenPB.png";
 import designAsImage from "../assets/projects/DesignAs/designAsPB.png";
 import bachelorImage from "../assets/projects/Bachelor/bachelorPB.png";
@@ -13,6 +13,20 @@ import evoliImage from "../assets/projects/Evoli/evoliPB.png";
 function ProjectsGrid() {
   const projects = [
     {
+      id: 10,
+      title: "Evoli",
+      thumbnail: evoliImage,
+      description: "Master Thesis: A mobile application and a wearable designed to reduce loneliness among university students. Features include self-reflection through an AI generated personal podcast and discreet in-situ support through haptic feedback.",
+      link: "/projects/evoli",
+    },
+    {
+      id: 9,
+      title: "ToWoodToGo",
+      thumbnail: toWoodToGoImage,
+      description: "A web application enabling craftsmen to sell leftover building materials back to STARK, promoting circular economy and reducing waste for a more sustainable construction industry.",
+      link: "/projects/toWoodToGo",
+    },
+    {
       id: 1,
       title: "HyperBox",
       thumbnail: hyperBoxImage,
@@ -23,7 +37,7 @@ function ProjectsGrid() {
       id: 2,
       title: "E-I-E-I-O",
       thumbnail: eieioImage,
-      description: "Short description of E-I-E-I-O",
+      description: "Interactive toy for children. Built with electronic circuits, custom PCBs, laser cutting, 3D printing, Arduino and I²C communication",
       link: "/projects/eieio",
     },
     {
@@ -68,39 +82,30 @@ function ProjectsGrid() {
       description: "Short description of night watch",
       link: "/projects/nightWatch",
     },
-    {
-      id: 9,
-      title: "ToWoodToGo",
-      thumbnail: toWoodToGoImage,
-      description: "Short description of ToWoodToGo",
-      link: "/projects/toWoodToGo",
-    },
-    {
-      id: 10,
-      title: "Evoli",
-      thumbnail: evoliImage,
-      description: "Short description of Evoli",
-      link: "/projects/evoli",
-    }
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-6xl mx-auto">
-      {projects.map((project) => (
-        <div key={project.id} className="relative group overflow-hidden">
-          <img
-            src={project.thumbnail}
-            alt={project.title}
-            className="w-full h-64 object-cover transition-all duration-600 group-hover:scale-105 group-hover:opacity-20"
-          />
-          <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <div className="text-center text-black p-4">
-              <h3 className="text-xl font-medium">{project.title}</h3>
-              <p className="text-sm font-light">{project.description}</p>
+    <div>
+      <h2 id="selected-projects" className="text-3xl font-extralight mb-8 flex justify-center text-red-500" style={{ fontFamily: "MilkyWalky" }}>
+        SELECTED PROJECTS
+      </h2>
+      <div className="grid grid-cols-2 gap-8 px-8 max-w-6xl mx-auto">
+        {projects.map((project) => (
+          <div key={project.id} className="relative group overflow-hidden">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-64 object-cover transition-all duration-600 group-hover:scale-105 group-hover:opacity-20"
+            />
+            <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer">
+              <div className="text-center text-black p-4">
+                <h3 className="text-4xl font-medium">{project.title}</h3>
+                <p className="text-xs font-extralight">{project.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

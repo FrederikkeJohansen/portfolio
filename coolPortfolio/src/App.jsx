@@ -6,7 +6,7 @@ import "../src/styles/Font.css";
 
 function App() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-[#FCF9FE]">
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />

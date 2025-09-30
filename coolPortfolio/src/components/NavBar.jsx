@@ -9,7 +9,7 @@ function NavBar() {
           <li>
             <Link
               to="/"
-              className="px-0 custom-underline hover:bg-white text-black font-bold text-md"
+              className="px-0 custom-underline hover:bg-transparent text-black font-bold text-md"
               style={{ fontFamily: "MilkyWalky" }}
             >
               Frederikke Ellen Johansen
@@ -22,13 +22,13 @@ function NavBar() {
           <li>
             <Link
               to="/projects"
-              className="px-0 mx-4   custom-underline hover:bg-white"
+              className="px-0 mx-4   custom-underline hover:bg-transparent"
             >
               PROJECTS
             </Link>
           </li>
           <li>
-            <Link to="/resume" className="px-0 custom-underline hover:bg-white">
+            <Link to="/resume" className="px-0 custom-underline hover:bg-transparent">
               RESUME
             </Link>
           </li>
