@@ -5,7 +5,7 @@ import designAsImage from "../assets/projects/DesignAs/designAsPB.png";
 import bachelorImage from "../assets/projects/Bachelor/bachelorPB.png";
 import engineeringImage from "../assets/projects/Engineering/engineeringPB.png";
 import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB.jpeg";
-import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.jpg";
+import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.png";
 import evoliImage from "../assets/projects/Evoli/evoliPB.png";
 
@@ -27,60 +27,60 @@ function ProjectsGrid() {
       link: "/projects/toWoodToGo",
     },
     {
+      id: 8,
+      title: "Night Watch",
+      thumbnail: nightWatchImage,
+      description: "Wearable designed to enhance personal safety during night time walks. Key components include a soft button for activation, vibration motors for discreet feedback, and optical fibers for emitting light. ",
+      link: "/projects/nightWatch",
+    },
+    {
+      id: 5,
+      title: "Traces, Privacy, and Territories",
+      thumbnail: bachelorImage,
+      description: "Bachelor Thesis: Explored the use of traces in collaborative writing by developing and evaluating a Google Docs–style prototype with features supporting private work and territorial boundaries.",
+      link: "/projects/bachelor",
+    },
+    {
+      id: 3,
+      title: "System Design for Værdicentralen",
+      thumbnail: vaerdicentralenImage,
+      description: "Collaborative project with Værdicentralen (thrift shop) involving participatory design, field studies, and agile development to design and develop a platform supporting workflow and coordination.",
+      link: "/projects/vaerdicentralen",
+    },
+    {
+      id: 7,
+      title: "Strainy Sleevy",
+      thumbnail: strainySleevyImage,
+      description: "Critical Design Project on Sustainability: An elbow sleeve for children that restricts movement based on parental energy consumption to provoke reflection and awareness.",
+      link: "/projects/strainySleevy",
+    },
+    {
       id: 1,
       title: "HyperBox",
       thumbnail: hyperBoxImage,
-      description: "Short description of HyperBox",
+      description: "A physical learning device for high school students to explore machine learning by adjusting hyperparameters and observing the outcomes.",
       link: "/projects/hyperbox",
     },
     {
       id: 2,
       title: "E-I-E-I-O",
       thumbnail: eieioImage,
-      description: "Interactive toy for children. Built with electronic circuits, custom PCBs, laser cutting, 3D printing, Arduino and I²C communication",
+      description: "Interactive toy for children. Built with electronic circuits, custom PCBs, laser cutting, 3D printing, Arduino and I²C communication.",
       link: "/projects/eieio",
-    },
-    {
-      id: 3,
-      title: "Platform for Værdicentralen",
-      thumbnail: vaerdicentralenImage,
-      description: "Short description of Værdicentralen",
-      link: "/projects/vaerdicentralen",
     },
     {
       id: 4,
       title: "Redesign of Stand Mixer",
       thumbnail: designAsImage,
-      description: "Short description of project",
-      link: "/projects/designAs",
-    },
-    {
-      id: 5,
-      title: "Bachelor’s thesis - Traces, Privacy, and Territories within Collaborative Writing Systems",
-      thumbnail: bachelorImage,
-      description: "Short description of bachelor",
+      description: "Redesign of a stand mixer through six distinct design periods; Arts & Crafts, Bauhaus, Ulm, Streamline, Postmodernism, and Eco-design.",
       link: "/projects/designAs",
     },
     {
       id: 6,
-      title: "Engineering Interactive Technologies",
+      title: "UX Design Logbook",
       thumbnail: engineeringImage,
-      description: "Short description of engineering",
+      description: "Selected pages from my UX logbook, including comparisons of UX maps and mental models, exploring newcomers’ experiences at the Burning Man festival through benchmarking and digital ethnography, and the creation of a Burner Sphere.",
       link: "/projects/engineering",
-    },
-    {
-      id: 7,
-      title: "Strainy Sleevy",
-      thumbnail: strainySleevyImage,
-      description: "Short description of strainy sleevy",
-      link: "/projects/strainySleevy",
-    },
-    {
-      id: 8,
-      title: "Night Watch",
-      thumbnail: nightWatchImage,
-      description: "Short description of night watch",
-      link: "/projects/nightWatch",
     },
   ];
 
