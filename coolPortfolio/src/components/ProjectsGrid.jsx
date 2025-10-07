@@ -1,10 +1,10 @@
 import hyperBoxImage from "../assets/projects/HyperBox/hyperBoxPB.jpg";
-import eieioImage from "../assets/projects/EIEIO/eieioPB.jpeg";
+import eieioImage from "../assets/projects/EIEIO/eieioPB.png";
 import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/vaerdicentralenPB.png";
 import designAsImage from "../assets/projects/DesignAs/designAsPB.png";
 import bachelorImage from "../assets/projects/Bachelor/bachelorPB.png";
-import engineeringImage from "../assets/projects/Engineering/engineeringPB.png";
-import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB.jpeg";
+import uxImage from "../assets/projects/UXLogbook/uxPB.png";
+import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB.png";
 import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.png";
 import evoliImage from "../assets/projects/Evoli/evoliPB.png";
@@ -27,11 +27,11 @@ function ProjectsGrid() {
       link: "/projects/toWoodToGo",
     },
     {
-      id: 8,
-      title: "Night Watch",
-      thumbnail: nightWatchImage,
-      description: "Wearable designed to enhance personal safety during night time walks. Key components include a soft button for activation, vibration motors for discreet feedback, and optical fibers for emitting light. ",
-      link: "/projects/nightWatch",
+      id: 6,
+      title: "UX Design Logbook",
+      thumbnail: uxImage,
+      description: "Selected pages from my UX logbook, including comparisons of UX maps and mental models, exploring newcomers' experiences at the Burning Man festival through benchmarking and digital ethnography, and the creation of a Burner Sphere.",
+      link: "/projects/ux",
     },
     {
       id: 5,
@@ -48,11 +48,11 @@ function ProjectsGrid() {
       link: "/projects/vaerdicentralen",
     },
     {
-      id: 7,
-      title: "Strainy Sleevy",
-      thumbnail: strainySleevyImage,
-      description: "Critical Design Project on Sustainability: An elbow sleeve for children that restricts movement based on parental energy consumption to provoke reflection and awareness.",
-      link: "/projects/strainySleevy",
+      id: 8,
+      title: "Night Watch",
+      thumbnail: nightWatchImage,
+      description: "Wearable designed to enhance personal safety during night time walks. Key components include a soft button for activation, vibration motors for discreet feedback, and optical fibers for emitting light. ",
+      link: "/projects/nightWatch",
     },
     {
       id: 1,
@@ -69,18 +69,18 @@ function ProjectsGrid() {
       link: "/projects/eieio",
     },
     {
+      id: 7,
+      title: "Strainy Sleevy",
+      thumbnail: strainySleevyImage,
+      description: "Critical Design Project on Sustainability: An elbow sleeve for children that restricts movement based on parental energy consumption to provoke reflection and awareness.",
+      link: "/projects/strainySleevy",
+    },
+    {
       id: 4,
       title: "Redesign of Stand Mixer",
       thumbnail: designAsImage,
       description: "Redesign of a stand mixer through six distinct design periods; Arts & Crafts, Bauhaus, Ulm, Streamline, Postmodernism, and Eco-design.",
       link: "/projects/designAs",
-    },
-    {
-      id: 6,
-      title: "UX Design Logbook",
-      thumbnail: engineeringImage,
-      description: "Selected pages from my UX logbook, including comparisons of UX maps and mental models, exploring newcomers’ experiences at the Burning Man festival through benchmarking and digital ethnography, and the creation of a Burner Sphere.",
-      link: "/projects/engineering",
     },
   ];
 
@@ -95,9 +95,9 @@ function ProjectsGrid() {
             <img
               src={project.thumbnail}
               alt={project.title}
-              className="w-full h-64 object-cover transition-all duration-600 group-hover:scale-105 group-hover:opacity-20"
+              className="w-full h-64 object-cover transition-all duration-600 group-hover:scale-105 group-hover:opacity-10"
             />
-            <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div className="text-center text-black p-4">
                 <h3 className="text-4xl font-medium">{project.title}</h3>
                 <p className="text-xs font-extralight">{project.description}</p>
