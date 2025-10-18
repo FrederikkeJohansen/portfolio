@@ -86,8 +86,8 @@ function ProjectsGrid() {
 
   return (
     <div>
-      <h2 id="selected-projects" className="text-3xl font-extralight mb-8 flex justify-center text-red-500" style={{ fontFamily: "MilkyWalky" }}>
-        SELECTED PROJECTS
+      <h2 id="selected-projects" className="text-3xl font-extralight mb-8 flex justify-center text-red-500">
+        Selected Projects
       </h2>
       <div className="grid grid-cols-2 gap-8 px-8 max-w-6xl mx-auto">
         {projects.map((project) => (

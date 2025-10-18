@@ -9,8 +9,7 @@
   position: absolute;
   width: 0%;
   height: 0.125rem;
-  /* 2px */
-  bottom: 0;
+  bottom: 0.25rem;
   left: 0;
   transform: translateX(0);
   background-color: currentColor;
