@@ -85,7 +85,7 @@ function ProjectsGrid() {
   ];
 
   return (
-    <div>
+    <div className="mb-4">
       <h2 id="selected-projects" className="text-xs font-extralight mb-2 flex justify-center text-black">
         SELECTED PROJECTS
       </h2>
