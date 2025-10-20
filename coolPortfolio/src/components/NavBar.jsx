@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import "../styles/CustomStyles.css";
 import "../styles/Font.css";
+
+function scrollToProjects() {
+  const projectsGrid = document.getElementById('selected-projects');
+  projectsGrid.scrollIntoView({ behavior: 'smooth' });
+}
+
 function NavBar() {
+
   return (
     <div className="navbar min-h-0 h-8 py-0 items-center px-4">
       <div className="flex-1">
@@ -21,8 +28,8 @@ function NavBar() {
         <ul className="menu menu-horizontal font-extralight h-8 min-h-0 items-center custom-fontSize">
           <li>
             <Link
-              to="/projects"
               className="px-0 mx-4   custom-underline hover:bg-transparent"
+              onClick={scrollToProjects}
             >
               PROJECTS
             </Link>
