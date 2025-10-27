@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/CustomStyles.css";
 import "../styles/Font.css";
+import resume from "../assets/resume/genericResume.pdf";
+import ResumeModal from "./ResumeModal";
 
 function scrollToProjects() {
   const projectsGrid = document.getElementById('selected-projects');
@@ -8,6 +11,15 @@ function scrollToProjects() {
 }
 
 function NavBar() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  function openResume() {
+    setIsResumeOpen(true);
+  }
+
+  function closeResume() {
+    setIsResumeOpen(false);
+  }
 
   return (
     <div className="navbar min-h-0 h-8 py-0 items-center px-4">
@@ -35,12 +47,18 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/resume" className="px-0 custom-underline hover:bg-transparent">
+            <Link className="px-0 custom-underline hover:bg-transparent"
+              onClick={openResume}>
               RESUME
             </Link>
           </li>
         </ul>
       </div>
+      <ResumeModal
+        isOpen={isResumeOpen}
+        onClose={closeResume}
+        resumeUrl={resume}
+      />
     </div>
   );
 }
