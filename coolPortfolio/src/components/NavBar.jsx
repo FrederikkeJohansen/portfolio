@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/CustomStyles.css";
 import "../styles/Font.css";
@@ -10,16 +9,12 @@ function scrollToProjects() {
   projectsGrid.scrollIntoView({ behavior: 'smooth' });
 }
 
+function openResume() {
+  window.open(resume, "blank");
+}
+
 function NavBar() {
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-  function openResume() {
-    setIsResumeOpen(true);
-  }
-
-  function closeResume() {
-    setIsResumeOpen(false);
-  }
 
   return (
     <div className="navbar min-h-0 h-8 py-0 items-center px-4">
@@ -54,11 +49,6 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={closeResume}
-        resumeUrl={resume}
-      />
     </div>
   );
 }
