@@ -30,7 +30,7 @@ function ProjectsGrid() {
       id: 6,
       title: "UX Design Logbook",
       thumbnail: uxImage,
-      description: "Selected pages from my UX logbook, including comparisons of UX maps and mental models, exploring newcomers' experiences at the Burning Man festival through benchmarking and digital ethnography, and the creation of a Burner Sphere.",
+      description: "Selected pages from my UX logbook, including comparisons of UX maps and mental models, exploring newcomers' experiences at the Burning Man festival through benchmarking and digital ethnography, and the creation of Burner Sphere.",
       link: "/projects/ux",
     },
     {

@@ -6,11 +6,10 @@ import resume from "../assets/resume/genericResume.pdf";
 function scrollToProjects() {
   const projectsGrid = document.getElementById('selected-projects');
   const navbarHeight = 64; // h-16 = 64px
-  const elementPosition = projectsGrid.offsetTop;
-  const offsetPosition = elementPosition - navbarHeight - 20; // Extra 20px for breathing room
-  
+  const projectPosition = projectsGrid.offsetTop - navbarHeight;
+
   window.scrollTo({
-    top: offsetPosition,
+    top: projectPosition,
     behavior: 'smooth'
   });
 }
