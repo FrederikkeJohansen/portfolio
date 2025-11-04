@@ -108,11 +108,11 @@ function ProjectsGrid() {
   ];
 
   return (
-    <div className="mb-8 px-12">
+    <div className="mb-8 px-4 md:px-12">
       <h2 id="selected-projects" className="text-sm font-extralight mb-2 flex justify-center text-black">
         SELECTED PROJECTS
       </h2>
-      <div className="grid grid-cols-2 gap-8 max-w-9xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-9xl">
         {projects.map((project) => (
           <div key={project.id} className="relative group overflow-hidden">
             <button
@@ -122,12 +122,18 @@ function ProjectsGrid() {
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full h-100 object-cover transition-all duration-600 group-hover:scale-105 group-hover:opacity-10"
+                className="w-full h-60 md:h-100 object-cover transition-all duration-600 md:group-hover:scale-105 md:group-hover:opacity-10"
               />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="hidden md:flex absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center text-black p-4">
                   <h3 className="text-5xl font-medium">{project.title}</h3>
                   <p className="text-lg font-extralight">{project.description}</p>
+                </div>
+              </div>
+              <div className="md:hidden mt-2 text-black">
+                <div className="mt-2 text-left">
+                  <h3 className="text-xl font-medium ">{project.title}</h3>
+                  <p className="text-sm font-extralight mb-4 text-left">{project.description}</p>
                 </div>
               </div>
             </button>
