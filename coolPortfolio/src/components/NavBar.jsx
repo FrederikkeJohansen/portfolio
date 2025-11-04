@@ -22,7 +22,7 @@ function NavBar() {
 
 
   return (
-    <div className="navbar sticky top-0 bg-[#FCF9FE] z-50 min-h-0 h-16 py-4 items-center px-4 ">
+    <div className="navbar sticky top-0 bg-[#FCF9FE] z-50 min-h-0 h-16 py-4 items-center px-4 text-black">
       <div className="flex-1">
         <ul className="menu menu-horizontal font-light h-16 min-h-0 items-center">
           <li>

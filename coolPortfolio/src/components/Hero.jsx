@@ -4,7 +4,7 @@ import { FaLongArrowAltDown } from "react-icons/fa";
 
 function Hero() {
   return (
-    <div className="mx-auto flex flex-col items-center md:pt-16 lg:pt-24 mb-16">
+    <div className="mx-auto flex flex-col items-center md:pt-16 lg:pt-24 mb-16 text-black">
       <h1
         className="text-6xl sm:text-7xl md:text-[8rem] lg:text-[9rem]"
         style={{ fontFamily: "MilkyWalky" }}
