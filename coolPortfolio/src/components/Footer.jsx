@@ -13,8 +13,8 @@ function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-base font-bold mb-1">Frederikke Ellen Johansen</h1>
-          <p className="font-light text-sm max-w-lg">
-            This portfolio was <span className="font-semibold">designed and developed by me</span> • I used <span className="font-semibold">Figma</span> for continuous design iteration • I built the code with <span className="font-semibold">React, Tailwind CSS, and DaisiUI</span>.</p>
+          <p className="font-light text-sm max-w-xl">
+            This portfolio was <span className="font-semibold">designed and developed by me</span> • I used <span className="font-semibold">Figma</span> for continuous design iteration • I coded this site using <span className="font-semibold">React, Tailwind CSS, and DaisyUI</span>.</p>
           <p className="font-light text-sm max-w-md italic">Actively maintained. Last updated: November 2025.</p>
 
         </div>
