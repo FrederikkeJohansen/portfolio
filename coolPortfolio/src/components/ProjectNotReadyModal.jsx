@@ -6,7 +6,7 @@ function ProjectNotReadyModal({ isOpen, onClose, project }) {
             <div className="modal-box relative bg-[#FCF9FE] border-1 border-gray-500 rounded-xl shadow-md">
                 <div className="flex justify-center items-center">
 
-                    <h3 className="font-bold text-xl m-4">{project?.title}</h3>
+                    <h3 className="font-bold text-xl text-black m-4">{project?.title}</h3>
                 </div>
                 <p className="font-light text-center text-base mb-4 text-black ">
                     I'm sorry the projects aren't ready to be viewed yet, but feel free to contact me. I would be more than happy to share more information with you!

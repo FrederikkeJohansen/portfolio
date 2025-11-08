@@ -112,7 +112,7 @@ function ProjectsGrid() {
       <h2 id="selected-projects" className="text-sm font-extralight mb-2 flex justify-center text-black">
         SELECTED PROJECTS
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-9xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-8 max-w-9xl">
         {projects.map((project) => (
           <div key={project.id} className="relative group overflow-hidden">
             <button
