@@ -9,7 +9,7 @@ import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB
 import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.png";
 import evoliImage from "../assets/projects/Evoli/evoliPB.png";
-import logoENVAImage from "../assets/projects/LogoENVA/logoENVAPB.png";
+import logoENVAImage from "../assets/projects/LogoENVA/logoEnvaPB.png";
 import PersonalGifts from "../assets/projects/PersonalGifts/personalGiftsPB.png";
 import ProjectNotReadyModal from "./ProjectNotReadyModal.jsx";
 
