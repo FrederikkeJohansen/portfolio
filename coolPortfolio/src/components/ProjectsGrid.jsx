@@ -9,6 +9,8 @@ import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB
 import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.png";
 import evoliImage from "../assets/projects/Evoli/evoliPB.png";
+import logoENVAImage from "../assets/projects/LogoENVA/logoENVAPB.png";
+import PersonalGifts from "../assets/projects/PersonalGifts/personalGiftsPB.png";
 import ProjectNotReadyModal from "./ProjectNotReadyModal.jsx";
 
 function ProjectsGrid() {
@@ -92,6 +94,13 @@ function ProjectsGrid() {
       link: "/projects/eieio",
     },
     {
+      id: 11,
+      title: "Logo Design for ENVA",
+      thumbnail: logoENVAImage,
+      description: "Logo design for the choir ENVA, reflecting a sleek and modern aesthetic.",
+      link: "/projects/logoENVA",
+    },
+    {
       id: 7,
       title: "Strainy Sleevy",
       thumbnail: strainySleevyImage,
@@ -104,6 +113,13 @@ function ProjectsGrid() {
       thumbnail: designAsImage,
       description: "Redesign of a stand mixer through six distinct design periods; Arts & Crafts, Bauhaus, Ulm, Streamline, Postmodernism, and Eco-design.",
       link: "/projects/designAs",
+    },
+    {
+      id: 12,
+      title: "Personalized Projects",
+      thumbnail: PersonalGifts,
+      description: "A collection of small personalized projects, including bookmarks, placecards, decorations, and christmas ornaments.",
+      link: "/projects/personalGifts",
     },
   ];
 
