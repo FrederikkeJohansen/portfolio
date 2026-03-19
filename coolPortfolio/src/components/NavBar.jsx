@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/CustomStyles.css";
 import "../styles/Font.css";
-import resume from "../assets/resume/genericResume.pdf";
 import MobileHamburgerMenuModal from "./MobileHamburgerMenuModal.jsx";
 
 function scrollToProjects() {
@@ -14,10 +13,6 @@ function scrollToProjects() {
     top: projectPosition,
     behavior: 'smooth'
   });
-}
-
-function openResume() {
-  window.open(resume, "blank");
 }
 
 function scrollToTop() {
@@ -36,14 +31,13 @@ function NavBar() {
 
   return (
     <>
-      <div className="navbar sticky top-0 bg-[#FCF9FE] z-50 min-h-0 h-16 py-4 items-center px-4 text-black">
+      <div className="navbar top-0 bg-transparent z-50 min-h-0 h-16 py-4 items-center px-4 text-black">
         <div className="navbar-start">
           <ul className="menu menu-horizontal font-light h-16 min-h-0 items-center">
             <li>
               <button
-                className="px-0 custom-underline hover:bg-transparent text-black text-2xl hidden md:flex"
-                style={{ fontFamily: "MilkyWalky" }}
-                onClick={scrollToTop}
+                className="px-0 custom-underline hover:bg-transparent text-black text-xl font-semibold hidden md:flex"
+                style={{ fontFamily: "MilkyWalky" }} onClick={scrollToTop}
               >
                 Frederikke Ellen Johansen
               </button>
@@ -52,9 +46,8 @@ function NavBar() {
         </div>
         <div className="navbar-center ">
           <button
-            className=" text-black text-2xl md:hidden"
-            style={{ fontFamily: "MilkyWalky" }}
-            onClick={scrollToTop}
+            className="text-black text-lg font-semibold md:hidden"
+            style={{ fontFamily: "MilkyWalky" }} onClick={scrollToTop}
           >
             Frederikke Ellen Johansen
           </button>
@@ -67,19 +60,29 @@ function NavBar() {
               </svg>
             </button>
           </div>
-          <ul className="menu menu-horizontal font-extralight h-16 min-h-0 items-center custom-fontSize hidden md:flex">
+          <ul className="menu menu-horizontal text-sm h-16 min-h-0 items-center hidden md:flex tracking-widest uppercase">
             <li>
               <Link
                 className="px-0 mx-4 custom-underline hover:bg-transparent"
                 onClick={scrollToProjects}
               >
-                PROJECTS
+                Work
               </Link>
             </li>
             <li>
-              <Link className="px-0 custom-underline hover:bg-transparent"
-                onClick={openResume}>
-                RESUME
+              <Link
+                className="px-0 mx-4 custom-underline hover:bg-transparent"
+                onClick={scrollToProjects}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="px-0 mx-4 custom-underline hover:bg-transparent"
+                onClick={scrollToProjects}
+              >
+                Contact
               </Link>
             </li>
           </ul>
@@ -89,7 +92,6 @@ function NavBar() {
         isOpen={isMenuOpen}
         toggleMenu={toggleMenu}
         scrollToProjects={scrollToProjects}
-        openResume={openResume}
       />
     </>
   );

@@ -101,3 +101,57 @@
 .animate-rotate {
   animation: rotate 0.3s ease-out forwards;
 }
+
+/* Hero entrance animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sparkle-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-twinkle {
+  animation: twinkle ease-in-out infinite;
+}
+
+.animate-sparkle-fade-out {
+  animation: sparkle-fade-out 0.8s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-twinkle,
+  .animate-sparkle-fade-out {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
