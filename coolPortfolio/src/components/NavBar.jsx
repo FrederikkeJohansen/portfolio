@@ -53,7 +53,7 @@ function NavBar() {
   return (
     <>
       <div
-        className={`navbar fixed top-0 z-50 min-h-0 h-12 xl:h-16 items-center px-4 md:px-8 text-black transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${pastHero ? "bg-[#FBF9FE] border-b border-slate-200" : "bg-transparent"}`}
+        className={`navbar fixed top-0 z-50 min-h-0 h-12 xl:h-12 2xl:h-16 items-center px-4 md:px-8 text-black transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${pastHero ? "bg-[#FBF9FE] border-b border-slate-200" : "bg-transparent"}`}
       >
         <div className="navbar-start">
           <ul className="menu menu-horizontal font-light h-12 xl:h-16 min-h-0 items-center">
