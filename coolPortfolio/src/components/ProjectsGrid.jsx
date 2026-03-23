@@ -162,10 +162,10 @@ function ProjectsGrid() {
                 <img
                   src={project.thumbnail}
                   alt={project.title}
-                  className="w-full h-72 md:h-[28rem] lg:h-[32rem] object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[38rem] object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
-                <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] bg-[#FBF9FE] flex items-center justify-center">
+                <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[38rem] bg-[#FBF9FE] flex items-center justify-center">
                   <span className="text-slate-400 text-base tracking-[0.2em] uppercase">Coming Soon</span>
                 </div>
               )}
@@ -232,7 +232,7 @@ function ProjectsGrid() {
                   <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className="w-full h-48 md:h-64 2xl:h-80 object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-48 md:h-64 2xl:h-96 object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div
