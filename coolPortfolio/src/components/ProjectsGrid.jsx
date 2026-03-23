@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Keyboard, Mousewheel } from "swiper/modules";
+import "swiper/css";
 import hyperBoxImage from "../assets/projects/HyperBox/hyperBoxPB.jpg";
 import eieioImage from "../assets/projects/EIEIO/eieioPB.png";
 import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/vaerdicentralenPB.png";
@@ -16,6 +19,8 @@ import ProjectNotReadyModal from "./ProjectNotReadyModal.jsx";
 function ProjectsGrid() {
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const developedProjects = [
     // Add project IDs here as you build their pages
@@ -46,7 +51,7 @@ function ProjectsGrid() {
     },
     {
       id: 9,
-      title: "ToWoodToGo",
+      title: "To-Wood-To-Go",
       thumbnail: toWoodToGoImage,
       description: "A web application enabling craftsmen to sell leftover building materials back to STARK, promoting circular economy and reducing waste for a more sustainable construction industry.",
       link: "/projects/toWoodToGo",
@@ -95,7 +100,7 @@ function ProjectsGrid() {
     },
     {
       id: 11,
-      title: "Logo Design for ENVA",
+      title: "Logo Design",
       thumbnail: logoENVAImage,
       description: "Logo design for the choir ENVA, reflecting a sleek and modern aesthetic.",
       link: "/projects/logoENVA",
@@ -123,38 +128,127 @@ function ProjectsGrid() {
     },
   ];
 
+  const featuredIds = [10, 9, 6];
+  const featuredProjects = featuredIds.map(id => projects.find(p => p.id === id)).filter(Boolean);
+  // Add placeholder for the upcoming project
+  featuredProjects.push({
+    id: 0,
+    title: "Coming Soon",
+    thumbnail: null,
+    description: "A new project is on its way. Stay tuned.",
+    link: "#",
+  });
+
+  const otherProjects = projects.filter(p => !featuredIds.includes(p.id));
+
   return (
     <div className="mb-8 px-4 md:px-12">
-      <h2 id="selected-projects" className="text-sm font-extralight mb-2 flex justify-center text-black">
-        SELECTED PROJECTS
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-8 max-w-9xl">
-        {projects.map((project) => (
-          <div key={project.id} className="relative group overflow-hidden">
-            <button
-              className="relative group overflow-hidden w-full h-full cursor-pointer bg-transparent border-0"
-              onClick={() => handleProjectClick(project)}
-            >
-              <img
-                src={project.thumbnail}
-                alt={project.title}
-                className="w-full h-60 md:h-100 object-cover transition-all duration-600 md:group-hover:scale-105 md:group-hover:opacity-10"
-              />
-              <div className="hidden md:flex absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-center text-black p-4">
-                  <h3 className="text-5xl font-medium">{project.title}</h3>
-                  <p className="text-lg font-extralight">{project.description}</p>
+      <div className="flex flex-row items-center mb-2">
+        <h2 id="selected-projects" className="text-base text-black tracking-[0.2em] uppercase whitespace-nowrap">
+          Featured Work
+        </h2>
+        <div className="border-b border-black flex-1 mx-8"></div>
+        <h2 className="text-base text-black tracking-[0.2em] uppercase whitespace-nowrap">
+          Portfolio
+        </h2>
+      </div>
+
+      {/* Featured Projects */}
+      <div className="flex flex-col gap-12 md:gap-16 mb-4">
+        {featuredProjects.map((project) => (
+          <div key={project.id} className="flex flex-col gap-3">
+            <div className="w-full overflow-hidden rounded-lg group cursor-pointer" onClick={() => handleProjectClick(project)}>
+              {project.thumbnail ? (
+                <img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full h-72 md:h-[28rem] lg:h-[32rem] object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] bg-[#FBF9FE] flex items-center justify-center">
+                  <span className="text-slate-400 text-lg tracking-widest uppercase">Coming Soon</span>
                 </div>
-              </div>
-              <div className="md:hidden mt-2 text-black">
-                <div className="mt-2 text-left">
-                  <h3 className="text-xl font-medium ">{project.title}</h3>
-                  <p className="text-sm font-extralight mb-4 text-left">{project.description}</p>
-                </div>
-              </div>
-            </button>
+              )}
+            </div>
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-black mb-1 uppercase tracking-widest">{project.title}</h3>
+              <p className="text-xl md:text-xl font-light text-slate-600">{project.description}</p>
+            </div>
           </div>
         ))}
+      </div>
+
+      {/* All Work Carousel */}
+      <h2 className=" uppercase text-center mb-8 text-2xl text-black tracking-[0.2em] font-bold">All Work</h2>
+      <div className="relative">
+        {/* Navigation arrows */}
+        <div className="flex justify-between ">
+          <button
+            className="carousel-prev cursor-pointer bg-transparent border-0 p-0 text-black hover:text-slate-500 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            className="carousel-next cursor-pointer bg-transparent border-0 p-0 text-black hover:text-slate-500 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        {/* Swiper carousel */}
+        <Swiper
+          ref={swiperRef}
+          modules={[Navigation, Keyboard, Mousewheel]}
+          centeredSlides={true}
+          loop={true}
+          speed={400}
+          grabCursor={true}
+          keyboard={{ enabled: true }}
+          mousewheel={{ forceToAxis: true }}
+          navigation={{
+            prevEl: ".carousel-prev",
+            nextEl: ".carousel-next",
+          }}
+          onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
+          breakpoints={{
+            0: { slidesPerView: 1.5, spaceBetween: 8 },
+            768: { slidesPerView: 4, spaceBetween: 24 },
+            1280: { slidesPerView: 5, spaceBetween: 40 },
+            1560: { slidesPerView: 6, spaceBetween: 56 },
+          }}
+        >
+          {otherProjects.map((project) => (
+            <SwiperSlide key={project.id}>
+              {({ isActive }) => (
+                <div
+                  className="cursor-pointer transition-all duration-400"
+                  style={{
+                    transform: isActive ? "scale(1)" : "scale(0.85)",
+                    opacity: isActive ? 1 : 0.6,
+                  }}
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <div className="w-full rounded-lg shadow-lg overflow-hidden">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div
+                    className="transition-opacity duration-400 mt-2 text-center"
+                    style={{ opacity: isActive ? 1 : 0.6 }}
+                  >
+                    <h3 className="text-sm font-bold text-black uppercase tracking-wider">{project.title}</h3>
+                  </div>
+                </div>
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <ProjectNotReadyModal
         isOpen={isProjectModalOpen}
