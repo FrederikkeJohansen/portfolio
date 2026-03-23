@@ -46,7 +46,7 @@ function NavBar() {
         </div>
         <div className="navbar-center ">
           <button
-            className="text-black text-lg font-semibold md:hidden"
+            className="text-black text-4xl font-semibold md:hidden"
             style={{ fontFamily: "MilkyWalky" }} onClick={scrollToTop}
           >
             Frederikke Ellen Johansen
