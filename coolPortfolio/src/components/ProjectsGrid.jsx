@@ -144,11 +144,11 @@ function ProjectsGrid() {
   return (
     <div className="mb-8 px-4 md:px-12">
       <div className="flex flex-row items-center mb-2">
-        <h2 id="selected-projects" className="text-sm text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
+        <h2 id="selected-projects" className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
           Featured Work
         </h2>
         <div className="border-b border-slate-300 flex-1 mx-8"></div>
-        <h2 className="text-sm text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
+        <h2 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
           Portfolio
         </h2>
       </div>
@@ -171,8 +171,8 @@ function ProjectsGrid() {
               )}
             </div>
             <div>
-              <h3 className="text-lg md:text-xl font-medium text-[#1a1a1a] mb-1 uppercase tracking-[0.2em]">{project.title}</h3>
-              <p className="text-base md:text-lg font-light text-slate-500">{project.description}</p>
+              <h3 className="text-lg md:text-xl 2xl:text-2xl font-medium text-[#1a1a1a] mb-1 uppercase tracking-[0.2em]">{project.title}</h3>
+              <p className="text-base md:text-lg 2xl:text-xl font-light text-slate-500">{project.description}</p>
             </div>
           </div>
         ))}
@@ -232,14 +232,14 @@ function ProjectsGrid() {
                   <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-48 md:h-64 2xl:h-80 object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div
                   className="transition-opacity duration-400 mt-2 text-center"
                   style={{ opacity: activeSlideIndex === index ? 1 : 0.6 }}
                 >
-                  <h3 className="text-xs font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
+                  <h3 className="text-xs 2xl:text-base font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
                 </div>
               </div>
             </SwiperSlide>
