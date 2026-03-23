@@ -144,11 +144,11 @@ function ProjectsGrid() {
   return (
     <div className="mb-8 px-4 md:px-12">
       <div className="flex flex-row items-center mb-2">
-        <h2 id="selected-projects" className="text-base text-black tracking-[0.2em] uppercase whitespace-nowrap">
+        <h2 id="selected-projects" className="text-sm text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
           Featured Work
         </h2>
-        <div className="border-b border-black flex-1 mx-8"></div>
-        <h2 className="text-base text-black tracking-[0.2em] uppercase whitespace-nowrap">
+        <div className="border-b border-slate-300 flex-1 mx-8"></div>
+        <h2 className="text-sm text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
           Portfolio
         </h2>
       </div>
@@ -166,20 +166,20 @@ function ProjectsGrid() {
                 />
               ) : (
                 <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] bg-[#FBF9FE] flex items-center justify-center">
-                  <span className="text-slate-400 text-lg tracking-widest uppercase">Coming Soon</span>
+                  <span className="text-slate-400 text-base tracking-[0.2em] uppercase">Coming Soon</span>
                 </div>
               )}
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-1 uppercase tracking-widest">{project.title}</h3>
-              <p className="text-xl md:text-xl font-light text-slate-600">{project.description}</p>
+              <h3 className="text-lg md:text-xl font-medium text-[#1a1a1a] mb-1 uppercase tracking-[0.2em]">{project.title}</h3>
+              <p className="text-base md:text-lg font-light text-slate-500">{project.description}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* All Work Carousel */}
-      <h2 className=" uppercase text-center mb-8 text-2xl text-black tracking-[0.2em] font-bold">All Work</h2>
+      <h2 className="uppercase text-center mb-4 text-xl text-slate-700 tracking-[0.2em]">All Work</h2>
       <div className="relative">
         {/* Navigation arrows */}
         <div className="flex justify-between ">
@@ -242,7 +242,7 @@ function ProjectsGrid() {
                     className="transition-opacity duration-400 mt-2 text-center"
                     style={{ opacity: isActive ? 1 : 0.6 }}
                   >
-                    <h3 className="text-sm font-bold text-black uppercase tracking-wider">{project.title}</h3>
+                    <h3 className="text-xs font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
                   </div>
                 </div>
               )}
