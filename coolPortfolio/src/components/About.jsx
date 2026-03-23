@@ -66,19 +66,14 @@ function About() {
                         <h3 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-3">
                             Good to Know
                         </h3>
-                        <div className="flex flex-wrap gap-3">
-                            <span className="bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full text-sm 2xl:text-base font-light text-slate-700">
-                                Something
-                            </span>
-                            <span className="bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full text-sm 2xl:text-base font-light text-slate-700">
-                                Something
-                            </span>
-                            <span className="bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full text-sm 2xl:text-base font-light text-slate-700">
-                                Something
-                            </span>
-                            <span className="bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full text-sm 2xl:text-base font-light text-slate-700">
-                                Something
-                            </span>
+                        <div className="flex flex-wrap items-center text-base 2xl:text-lg font-light text-slate-700">
+                            <span>Something</span>
+                            <span className="mx-3 text-slate-400">|</span>
+                            <span>Something</span>
+                            <span className="mx-3 text-slate-400">|</span>
+                            <span>Something</span>
+                            <span className="mx-3 text-slate-400">|</span>
+                            <span>Something</span>
                         </div>
                     </div>
                 </div>
