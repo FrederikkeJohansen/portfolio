@@ -214,38 +214,34 @@ function ProjectsGrid() {
           }}
           onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
           breakpoints={{
-            0: { slidesPerView: 1.5, spaceBetween: 8 },
-            768: { slidesPerView: 4, spaceBetween: 24 },
-            1280: { slidesPerView: 5, spaceBetween: 40 },
-            1560: { slidesPerView: 6, spaceBetween: 56 },
+            0: { slidesPerView: 2, spaceBetween: 12 },
+            768: { slidesPerView: 5, spaceBetween: 24 },
           }}
         >
-          {otherProjects.map((project) => (
+          {otherProjects.map((project, index) => (
             <SwiperSlide key={project.id}>
-              {({ isActive }) => (
-                <div
-                  className="cursor-pointer transition-all duration-400"
-                  style={{
-                    transform: isActive ? "scale(1)" : "scale(0.85)",
-                    opacity: isActive ? 1 : 0.6,
-                  }}
-                  onClick={() => handleProjectClick(project)}
-                >
-                  <div className="w-full rounded-lg shadow-lg overflow-hidden">
-                    <img
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <div
-                    className="transition-opacity duration-400 mt-2 text-center"
-                    style={{ opacity: isActive ? 1 : 0.6 }}
-                  >
-                    <h3 className="text-xs font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
-                  </div>
+              <div
+                className="cursor-pointer transition-all duration-400"
+                style={{
+                  transform: activeSlideIndex === index ? "scale(1)" : "scale(0.85)",
+                  opacity: activeSlideIndex === index ? 1 : 0.6,
+                }}
+                onClick={() => handleProjectClick(project)}
+              >
+                <div className="w-full rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-              )}
+                <div
+                  className="transition-opacity duration-400 mt-2 text-center"
+                  style={{ opacity: activeSlideIndex === index ? 1 : 0.6 }}
+                >
+                  <h3 className="text-xs font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
