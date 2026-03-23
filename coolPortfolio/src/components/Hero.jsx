@@ -10,8 +10,8 @@ function Hero() {
       {/* Text content */}
       <div className="flex flex-col items-center text-center px-6 sm:px-12 lg:px-0 gap-4 sm:gap-5 lg:gap-6 max-w-5xl">
         <h1
-          className="animate-fade-up text-5xl sm:text-7xl lg:text-9xl font-bold"
-          style={{ animationDelay: "0.6s", color: "#1a1a1a" }}
+          className="animate-fade-up text-5xl sm:text-7xl lg:text-9xl font-bold text-[#1a1a1a]"
+          style={{ animationDelay: "0.6s" }}
         >
           Hi! I'm Frederikke
         </h1>
