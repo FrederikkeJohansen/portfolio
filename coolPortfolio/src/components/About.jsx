@@ -1,6 +1,7 @@
 function About() {
     return (
         <div
+            id="about"
             className="h-screen px-4 md:px-12 py-8 flex flex-col max-md:h-auto max-md:min-h-screen"
             style={{
                 background:

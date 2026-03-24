@@ -4,22 +4,16 @@ import "../styles/CustomStyles.css";
 import "../styles/Font.css";
 import MobileHamburgerMenuModal from "./MobileHamburgerMenuModal.jsx";
 
-function scrollToProjects() {
-  const projectsGrid = document.getElementById('selected-projects');
-  const navbarHeight = 64; // h-16 = 64px
-  const projectPosition = projectsGrid.offsetTop - navbarHeight;
-
-  window.scrollTo({
-    top: projectPosition,
-    behavior: 'smooth'
-  });
+function scrollToElement(id) {
+  const element = document.getElementById(id);
+  if (!element) return;
+  const navbarHeight = 64;
+  const position = element.offsetTop - navbarHeight;
+  window.scrollTo({ top: position, behavior: "smooth" });
 }
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function NavBar() {
@@ -89,7 +83,7 @@ function NavBar() {
             <li>
               <Link
                 className="px-0 mx-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={scrollToProjects}
+                onClick={() => scrollToElement("selected-projects")}
               >
                 Work
               </Link>
@@ -97,7 +91,7 @@ function NavBar() {
             <li>
               <Link
                 className="px-0 mx-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={scrollToProjects}
+                onClick={() => scrollToElement("about")}
               >
                 About
               </Link>
@@ -105,7 +99,7 @@ function NavBar() {
             <li>
               <Link
                 className="px-0 ml-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={scrollToProjects}
+                onClick={() => scrollToElement("contact")}
               >
                 Contact
               </Link>
@@ -116,7 +110,7 @@ function NavBar() {
       <MobileHamburgerMenuModal
         isOpen={isMenuOpen}
         toggleMenu={toggleMenu}
-        scrollToProjects={scrollToProjects}
+        scrollToElement={scrollToElement}
       />
     </>
   );
