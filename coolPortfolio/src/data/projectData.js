@@ -22,7 +22,7 @@ export const projects = [
     caseStudyReady: true,
     thumbnail: evoliImage,
     images: [evoliImage, evoliImage, evoliImage, evoliImage, evoliImage],
-    shortDescription: "Master Thesis — A mobile app and wearable designed to reduce loneliness among university students.",
+    shortDescription: "Master Thesis: A mobile application and a wearable designed to reduce loneliness among university students. Features include self-reflection through an AI generated personal podcast and discreet in-situ support through haptic feedback.",
     description: "Master Thesis: A mobile application and a wearable designed to reduce loneliness among university students. Features include self-reflection through an AI generated personal podcast and discreet in-situ support through haptic feedback.",
   },
   {
@@ -30,13 +30,13 @@ export const projects = [
     title: "To-Wood-To-Go",
     slug: "to-wood-to-go",
     year: 2024,
-    responsibility: "Designed and developed a full-stack web application from concept to deployment.",
-    tags: ["Web Development", "React", "UX Design", "Sustainability", "Full-Stack"],
-    caseStudyReady: false,
+    responsibility: "Developed in a team of three, collaborating on ideation and concept development. My primary responsibility was frontend development, along with user research and usability evaluation.",
+    tags: ["Figma Prototyping", "Web Application", "MERN Stack", "Usability Evaluation", "Next-js", "User Journey Map"],
+    caseStudyReady: true,
     thumbnail: toWoodToGoImage,
     images: [toWoodToGoImage, toWoodToGoImage, toWoodToGoImage, toWoodToGoImage],
-    shortDescription: "A web app enabling craftsmen to sell leftover building materials, promoting circular economy.",
-    description: "A web application enabling craftsmen to sell leftover building materials back to STARK, promoting circular economy and reducing waste for a more sustainable construction industry.",
+    shortDescription: "A web application enabling craftsmen to sell leftover building materials back to STARK, promoting circular economy and reducing waste for a more sustainable construction industry.",
+    description: ["This project explores how digital technology can help reduce material waste in the construction industry. Large amounts of leftover materials from construction sites are often discarded because handling them requires additional time and logistics. To address this problem, we developed a concept where craftsmen can sell leftover or used materials back to a supplier through a digital platform. The system was designed in collaboration with STARK. Here, craftsmen can upload materials through an app by taking pictures, adding a description (written or voice recorded), and specifying quantity. STARK can then review the listing and propose a price. If the craftsman accepts the offer, the materials can be delivered to a STARK store when the craftsman next visits.", "The concept aims to support a circular economy by keeping materials in use rather than discarding them after a project. To explore the feasibility of the concept, we used Figma for prototyping to explore ideas and externalize it to users. Later, we designed and implemented a prototype web application. The prototype allows users to create material listings, upload images and descriptions, and receive price offers. STARK can access the listing through a link sent by email and respond with an offer that the craftsman can accept or reject.", "The prototype was implemented using a MERN-based web architecture enhanced with Next.js. The system supports listing creation, database storage, media uploads, email notifications, and responsive access from both mobile devices and desktop computers.",]
   },
   {
     id: 6,

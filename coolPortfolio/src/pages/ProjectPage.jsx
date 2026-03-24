@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { projects } from "../data/projectData";
+import Footer from "../components/Footer";
 
 // Predefined grid spans for visual variety in the image gallery
 const gridPatterns = [
@@ -52,7 +53,7 @@ function ProjectPage() {
       </h1>
 
       {/* Year */}
-      <p className="text-sm 2xl:text-base font-light text-slate-400 tracking-[0.2em] uppercase mb-10 md:mb-14">
+      <p className="text-sm 2xl:text-base font-light text-slate-400 tracking-[0.2em] uppercase mb-6 md:mb-6">
         {project.year}
       </p>
 
@@ -66,17 +67,25 @@ function ProjectPage() {
       </div>
 
       {/* Description */}
-      <div className="max-w-3xl">
-        <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-4">
+      <div className="max-w-full">
+        <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-2">
           About this project
         </h2>
-        <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed mb-6">
-          {project.description}
-        </p>
+        {Array.isArray(project.description) ? (
+          project.description.map((paragraph, i) => (
+            <p key={i} className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed mb-4">
+              {paragraph}
+            </p>
+          ))
+        ) : (
+          <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed mb-6">
+            {project.description}
+          </p>
+        )}
 
         {/* Tags */}
         {project.tags && project.tags.length > 0 && (
-          <div className="flex flex-wrap items-center text-sm 2xl:text-base font-light text-slate-500 mb-10">
+          <div className="flex flex-wrap items-center text-sm 2xl:text-base font-light text-slate-500 mb-8">
             {project.tags.map((tag, i) => (
               <span key={tag} className="flex items-center">
                 {i > 0 && <span className="mx-3 text-slate-300">|</span>}
@@ -91,8 +100,8 @@ function ProjectPage() {
         <>
           {/* Responsibility */}
           {project.responsibility && (
-            <div className="max-w-3xl mb-10 md:mb-14">
-              <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-4">
+            <div className="max-w-full mb-8 md:mb-12">
+              <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-2">
                 My Role
               </h2>
               <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed">
@@ -103,8 +112,8 @@ function ProjectPage() {
 
           {/* Image gallery */}
           {project.images && project.images.length > 0 && (
-            <div className="">
-              <div className="flex flex-row items-center mb-8">
+            <div className="mb-8">
+              <div className="flex flex-row items-center mb-2">
                 <h2 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
                   Gallery
                 </h2>
@@ -119,7 +128,7 @@ function ProjectPage() {
                     <img
                       src={img}
                       alt={`${project.title} - ${i + 1}`}
-                      className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 ))}
@@ -128,12 +137,13 @@ function ProjectPage() {
           )}
         </>
       ) : (
-        <div className="border-t border-slate-200 mt-10 pt-10 pb-16">
+        <div className="border-t border-slate-200 mt-8 pt-8 pb-16">
           <p className="text-sm font-light text-slate-400 tracking-[0.2em] uppercase text-center">
             Full case study coming soon
           </p>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

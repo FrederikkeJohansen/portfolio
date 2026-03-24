@@ -1,3 +1,4 @@
+import ImageOfMe from "../assets/me.jpeg";
 function About() {
     return (
         <div
@@ -15,7 +16,7 @@ function About() {
 
             {/* Content */}
             <div className="flex-1 flex items-start justify-center pt-2">
-                <div className="w-full grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 md:gap-10 items-start">
+                <div className="w-full grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 md:gap-10 md:items-center items-start">
 
                     {/* Left column */}
                     <div className="flex flex-col gap-8 md:gap-10">
@@ -63,27 +64,24 @@ function About() {
                         {/* Good to Know */}
                         <div>
                             <h3 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-2">
-                                Good to Know
+                                More to Know
                             </h3>
                             <div className="flex flex-wrap items-center text-[clamp(0.8rem,1.1vw,1.25rem)] font-light text-slate-700">
-                                <span>Something</span>
-                                <span className="mx-3 text-slate-400">|</span>
-                                <span>Something</span>
-                                <span className="mx-3 text-slate-400">|</span>
-                                <span>Something</span>
-                                <span className="mx-3 text-slate-400">|</span>
+                                <span>Passionated</span>
+                                <span className="mx-4 text-slate-400">|</span>
+                                <span>Matcha Enthusiast</span>
+                                <span className="mx-4 text-slate-400">|</span>
+                                <span>Student Mentor</span>
+                                <span className="mx-4 text-slate-400">|</span>
                                 <span>Something</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Right column — Image */}
-                    <div className="flex justify-center md:justify-end">
-                        <div className="w-72 h-80 md:w-full md:h-[55vh] bg-slate-300/30 rounded-2xl shadow-lg flex items-center justify-center">
-                            <span className="text-slate-400 text-sm tracking-[0.2em] uppercase">
-                                Photo
-                            </span>
-                        </div>
+                    <div className="flex justify-center md:justify-end md:items-center">
+                        <img src={ImageOfMe} alt="Frederikke Johansen" className="w-full h-full object-cover rounded-2xl" />
+
                     </div>
                 </div>
             </div>
