@@ -15,13 +15,6 @@ function ProjectsGrid() {
   }
 
   const featuredProjects = featuredIds.map(id => projects.find(p => p.id === id)).filter(Boolean);
-  featuredProjects.push({
-    id: 0,
-    title: "Coming Soon",
-    slug: null,
-    thumbnail: null,
-    description: "A new project is on its way. Stay tuned.",
-  });
 
   const otherProjects = projects.filter(p => !featuredIds.includes(p.id));
 
@@ -66,19 +59,19 @@ function ProjectsGrid() {
       </div>
 
       {/* All Work Carousel */}
-      <h2 className="uppercase text-center mb-4 text-xl text-slate-700 tracking-[0.2em]">All Work</h2>
+      <h2 className="uppercase text-center mb-4 text-xl text-slate-700 tracking-[0.2em] mt-20">All Work</h2>
       <div className="relative">
         {/* Navigation arrows */}
         <div className="flex justify-between ">
           <button
-            className="carousel-prev cursor-pointer bg-transparent border-0 p-0 text-black hover:text-slate-500 transition-colors duration-200"
+            className="carousel-prev cursor-pointer bg-transparent border-0 p-0 text-black hover:text-[#FF007B] transition-colors duration-200"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
-            className="carousel-next cursor-pointer bg-transparent border-0 p-0 text-black hover:text-slate-500 transition-colors duration-200"
+            className="carousel-next cursor-pointer bg-transparent border-0 p-0 text-black hover:text-[#FF007B] transition-colors duration-200"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" />
