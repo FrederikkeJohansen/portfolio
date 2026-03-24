@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import "../styles/CustomStyles.css";
 import "../styles/Font.css";
@@ -21,9 +21,28 @@ function NavBar() {
   const [visible, setVisible] = useState(true);
   const [pastHero, setPastHero] = useState(false);
   const lastScrollY = useRef(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isProjectPage = location.pathname.startsWith("/project/");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavClick = (id) => {
+    if (isProjectPage) {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      scrollToElement(id);
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (isProjectPage) {
+      navigate("/");
+    } else {
+      scrollToTop();
+    }
   };
 
   useEffect(() => {
@@ -47,7 +66,7 @@ function NavBar() {
   return (
     <>
       <div
-        className={`navbar fixed top-0 z-50 min-h-0 h-12 xl:h-12 2xl:h-16 items-center px-4 md:px-8 text-black transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${pastHero ? "bg-[#FBF9FE]/80 backdrop-blur-xs border-b border-slate-200/50" : "bg-transparent"}`}
+        className={`navbar fixed top-0 z-50 min-h-0 h-12 xl:h-12 2xl:h-16 items-center px-4 md:px-8 text-black transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${pastHero || isProjectPage ? "bg-[#FBF9FE]/80 backdrop-blur-xs border-b border-slate-200/50" : "bg-transparent"}`}
       >
         <div className="navbar-start">
           <ul className="menu menu-horizontal font-light h-12 xl:h-16 min-h-0 items-center">
@@ -55,7 +74,7 @@ function NavBar() {
               <button
                 className="px-0 custom-underline hover:bg-transparent text-black text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold hidden md:flex cursor-pointer"
                 style={{ fontFamily: "MilkyWalky" }}
-                onClick={scrollToTop}
+                onClick={handleLogoClick}
               >
                 Frederikke Ellen Johansen
               </button>
@@ -66,7 +85,7 @@ function NavBar() {
           <button
             className=" text-black text-2xl sm:text-3xl font-semibold md:hidden cursor-pointer"
             style={{ fontFamily: "MilkyWalky" }}
-            onClick={scrollToTop}
+            onClick={handleLogoClick}
           >
             Frederikke Ellen Johansen
           </button>
@@ -81,28 +100,28 @@ function NavBar() {
           </div>
           <ul className="menu menu-horizontal text-2xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base h-12 xl:h-16 min-h-0 items-center hidden md:flex tracking-widest uppercase">
             <li>
-              <Link
+              <button
                 className="px-0 mx-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={() => scrollToElement("selected-projects")}
+                onClick={() => handleNavClick("selected-projects")}
               >
                 Work
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
+              <button
                 className="px-0 mx-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={() => scrollToElement("about")}
+                onClick={() => handleNavClick("about")}
               >
                 About
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
+              <button
                 className="px-0 ml-4 custom-underline hover:bg-transparent text-black cursor-pointer"
-                onClick={() => scrollToElement("contact")}
+                onClick={() => handleNavClick("contact")}
               >
                 Contact
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
@@ -110,7 +129,7 @@ function NavBar() {
       <MobileHamburgerMenuModal
         isOpen={isMenuOpen}
         toggleMenu={toggleMenu}
-        scrollToElement={scrollToElement}
+        scrollToElement={handleNavClick}
       />
     </>
   );

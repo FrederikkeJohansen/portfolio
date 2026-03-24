@@ -2,6 +2,18 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { projects } from "../data/projectData";
 
+// Predefined grid spans for visual variety in the image gallery
+const gridPatterns = [
+  "md:col-span-2 md:row-span-2",
+  "md:col-span-1 md:row-span-1",
+  "md:col-span-1 md:row-span-1",
+  "md:col-span-1 md:row-span-2",
+  "md:col-span-2 md:row-span-1",
+  "md:col-span-1 md:row-span-1",
+  "md:col-span-1 md:row-span-1",
+  "md:col-span-2 md:row-span-1",
+];
+
 function ProjectPage() {
   const { slug } = useParams();
 
@@ -34,13 +46,15 @@ function ProjectPage() {
         Back
       </Link>
 
-      {/* Project header */}
-      <div className="flex flex-row items-center mb-8 md:mb-12">
-        <h1 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
-          {project.title}
-        </h1>
-        <div className="border-b border-slate-300 flex-1 mx-8"></div>
-      </div>
+      {/* Project title */}
+      <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-light text-[#1a1a1a] mb-4">
+        {project.title}
+      </h1>
+
+      {/* Year */}
+      <p className="text-sm 2xl:text-base font-light text-slate-400 tracking-[0.2em] uppercase mb-10 md:mb-14">
+        {project.year}
+      </p>
 
       {/* Hero image */}
       <div className="w-full overflow-hidden rounded-lg mb-10 md:mb-14">
@@ -56,17 +70,70 @@ function ProjectPage() {
         <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-4">
           About this project
         </h2>
-        <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed mb-8">
+        <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed mb-6">
           {project.description}
         </p>
+
+        {/* Tags */}
+        {project.tags && project.tags.length > 0 && (
+          <div className="flex flex-wrap items-center text-sm 2xl:text-base font-light text-slate-500 mb-10">
+            {project.tags.map((tag, i) => (
+              <span key={tag} className="flex items-center">
+                {i > 0 && <span className="mx-3 text-slate-300">|</span>}
+                <span>{tag}</span>
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Placeholder for future content */}
-      <div className="border-t border-slate-200 pt-10 pb-16">
-        <p className="text-sm font-light text-slate-400 tracking-[0.2em] uppercase text-center">
-          Full case study coming soon
-        </p>
-      </div>
+      {project.caseStudyReady ? (
+        <>
+          {/* Responsibility */}
+          {project.responsibility && (
+            <div className="max-w-3xl mb-10 md:mb-14">
+              <h2 className="text-sm 2xl:text-base font-medium text-[#FF007B] uppercase tracking-[0.2em] mb-4">
+                My Role
+              </h2>
+              <p className="text-base xl:text-lg 2xl:text-xl font-light text-slate-700 leading-relaxed">
+                {project.responsibility}
+              </p>
+            </div>
+          )}
+
+          {/* Image gallery */}
+          {project.images && project.images.length > 0 && (
+            <div className="">
+              <div className="flex flex-row items-center mb-8">
+                <h2 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
+                  Gallery
+                </h2>
+                <div className="border-b border-slate-300 flex-1 mx-8"></div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[160px] md:auto-rows-[180px] 2xl:auto-rows-[220px]">
+                {project.images.map((img, i) => (
+                  <div
+                    key={i}
+                    className={`overflow-hidden rounded-lg ${gridPatterns[i % gridPatterns.length]}`}
+                  >
+                    <img
+                      src={img}
+                      alt={`${project.title} - ${i + 1}`}
+                      className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="border-t border-slate-200 mt-10 pt-10 pb-16">
+          <p className="text-sm font-light text-slate-400 tracking-[0.2em] uppercase text-center">
+            Full case study coming soon
+          </p>
+        </div>
+      )}
     </div>
   );
 }

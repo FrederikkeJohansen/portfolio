@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div id="contact" className="bg-[#FBF9FE] px-4 md:px-12 py-16 md:py-24">
       {/* Header */}
-      <div className="flex flex-row items-center mb-12 md:mb-16">
+      <div className="flex flex-row items-center mb-2">
         <h2 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
           Contact
         </h2>

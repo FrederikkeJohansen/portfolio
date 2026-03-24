@@ -2,22 +2,22 @@ function About() {
     return (
         <div
             id="about"
-            className="h-screen px-4 md:px-12 py-8 flex flex-col max-md:h-auto max-md:min-h-screen"
+            className="px-4 md:px-12 py-8 flex flex-col"
             style={{
                 background:
                     "linear-gradient(180deg, #FBF9FE 0%, #CADAFF 8%, #d8e4ff 40%, #FBF9FE 70%, #CADAFF 100%)",
             }}
         >
             {/* Header */}
-            <div className="flex flex-row items-center mb-[2vh]">
-                <h2 className="text-[clamp(0.75rem,1vw,1rem)] text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
+            <div className="flex flex-row items-center mb-2">
+                <h2 className="text-sm 2xl:text-base text-slate-700 tracking-[0.2em] uppercase whitespace-nowrap">
                     About
                 </h2>
-                <div className="border-b border-slate-400/50 flex-1 mx-8"></div>
+                <div className="border-b border-slate-300 flex-1 mx-8"></div>
             </div>
 
             {/* Content — fills remaining viewport */}
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex items-start justify-center pt-2">
                 <div className="w-full grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 md:gap-10 items-start">
 
                     {/* Left column */}

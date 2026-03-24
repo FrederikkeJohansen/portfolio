@@ -59,7 +59,7 @@ function ProjectsGrid() {
             </div>
             <div>
               <h3 className="text-lg md:text-xl 2xl:text-2xl font-medium text-[#1a1a1a] mb-1 uppercase tracking-[0.2em]">{project.title}</h3>
-              <p className="text-base md:text-lg 2xl:text-xl font-light text-slate-500">{project.description}</p>
+              <p className="text-base md:text-lg 2xl:text-xl font-light text-slate-500">{project.shortDescription || project.description}</p>
             </div>
           </div>
         ))}
