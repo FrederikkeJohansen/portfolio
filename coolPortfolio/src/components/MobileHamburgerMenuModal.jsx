@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-function MobileHamburgerMenuModal({ isOpen, toggleMenu, scrollToProjects, openResume }) {
+function MobileHamburgerMenuModal({ isOpen, toggleMenu, scrollToElement }) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -26,21 +26,31 @@ function MobileHamburgerMenuModal({ isOpen, toggleMenu, scrollToProjects, openRe
                 <button
                     className="text-4xl font-extralight custom-static-underline"
                     onClick={() => {
-                        scrollToProjects();
+                        scrollToElement("selected-projects");
                         toggleMenu();
                     }}
                 >
-                    PROJECTS
+                    WORK
                 </button>
 
                 <button
                     className="text-4xl font-extralight custom-static-underline"
                     onClick={() => {
-                        openResume();
+                        scrollToElement("about");
                         toggleMenu();
                     }}
                 >
-                    RESUME
+                    ABOUT
+                </button>
+
+                <button
+                    className="text-4xl font-extralight custom-static-underline"
+                    onClick={() => {
+                        scrollToElement("contact");
+                        toggleMenu();
+                    }}
+                >
+                    CONTACT
                 </button>
             </div>
         </div>

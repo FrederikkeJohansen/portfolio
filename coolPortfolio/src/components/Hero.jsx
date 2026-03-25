@@ -1,20 +1,37 @@
+import "../styles/CustomStyles.css";
+
 function Hero() {
+
   return (
-    <div className="mx-auto flex flex-col items-center pt-12 sm:pt-24 md:pt-16 lg:pt-24 mb-16 text-black px-4">
-      <h1
-        className="text-6xl sm:text-7xl md:text-[8rem] lg:text-[9rem]"
-        style={{ fontFamily: "MilkyWalky" }}
-      >
-        Frederikke
-      </h1>
-      <p className="text-center font-extralight text-base sm:text-lg md:text-xl lg:text-xl max-w-2xl mx-auto">
-        Hi! - I'm a MSc graduate in IT Product Development from Aarhus University with interests in <span className="highlighted-text">hardware, front-end development, and UI/UX design.</span> While I'm still early
-        in my journey and building my skills, I'm encouraged to learn and
-        improve.
-      </p>
+    <div
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      style={{ background: "linear-gradient(180deg, #FBF9FE 0%, #CADAFF 40%, #FBF9FE 100%)" }}
+    >
+      {/* Text content */}
+      <div className="flex flex-col items-center text-center px-6 sm:px-12 lg:px-0 gap-4 sm:gap-5 lg:gap-6 max-w-5xl">
+        <h1
+          className="animate-fade-up text-5xl sm:text-7xl lg:text-9xl font-medium text-[#1a1a1a]"
+          style={{ animationDelay: "0.6s" }}
+        >
+          Hi! I'm Frederikke
+        </h1>
+        <p
+          className="animate-fade-up text-sm sm:text-lg lg:text-2xl uppercase tracking-[0.2em] text-slate-700"
+          style={{ animationDelay: "1.0s" }}
+        >
+          <span className="relative inline-block">
+            <span className="relative">UX/UI Designer & Software Developer</span>
+          </span>
+        </p>
+        <p
+          className="animate-fade-up text-sm sm:text-lg lg:text-xl font-light text-slate-500 max-w-[640px]"
+          style={{ animationDelay: "1.4s" }}
+        >
+          I craft intuitive digital experiences with a strong interest in design, front-end development, and hardware.
+        </p>
+      </div>
     </div>
   );
 }
-
 
 export default Hero;

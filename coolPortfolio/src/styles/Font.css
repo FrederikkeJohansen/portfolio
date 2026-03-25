@@ -1,4 +1,20 @@
 @font-face {
+  font-family: 'NunitoSans';
+  src: url('/fonts/NunitoSans-Variable.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: url('/fonts/NunitoSans-Variable-Italic.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Flaviotte';
   src: url('/fonts/Flaviotte.woff2') format('woff2'),
        url('/fonts/Flaviotte.woff') format('woff'),
