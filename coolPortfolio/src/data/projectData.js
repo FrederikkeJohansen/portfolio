@@ -17,7 +17,7 @@ import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import logoENVAImage from "../assets/projects/LogoENVA/logoEnvaPB.png";
 import PersonalGifts from "../assets/projects/PersonalGifts/personalGiftsPB.png";
 
-import uxImage from "../assets/projects/UXLogbook/uxPB.jpg";
+import uxImage from "../assets/projects/UXLogbook/UXPB.jpg";
 import ux1 from "../assets/projects/UXLogbook/UX1.jpg";
 import ux2 from "../assets/projects/UXLogbook/UX2.jpg";
 import ux3 from "../assets/projects/UXLogbook/UX3.jpg";
