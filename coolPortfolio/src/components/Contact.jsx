@@ -12,10 +12,8 @@ function Contact() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col items-center text-center gap-6">
-        <p className="text-[clamp(1.25rem,2.5vw,2.5rem)] font-light text-[#1a1a1a] leading-relaxed max-w-2xl">
-          Like what you see? Let's get in touch.
-        </p>
+      <div className="flex flex-col items-center text-center">
+
 
         {/* Social icons */}
         <div className="flex gap-6 mt-4">

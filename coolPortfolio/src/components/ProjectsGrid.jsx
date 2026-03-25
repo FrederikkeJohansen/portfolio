@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Keyboard, Mousewheel } from "swiper/modules";
@@ -7,7 +7,6 @@ import { projects, featuredIds } from "../data/projectData";
 
 function ProjectsGrid() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  const swiperRef = useRef(null);
   const navigate = useNavigate();
 
   function handleProjectClick(project) {
@@ -17,6 +16,7 @@ function ProjectsGrid() {
   const featuredProjects = featuredIds.map(id => projects.find(p => p.id === id)).filter(Boolean);
 
   const otherProjects = projects.filter(p => !featuredIds.includes(p.id));
+  const loopedProjects = otherProjects.length > 0 ? [...otherProjects, ...otherProjects, ...otherProjects] : [];
 
   return (
     <div className="mb-8 px-4 md:px-12">
@@ -79,7 +79,7 @@ function ProjectsGrid() {
         </div>
         {/* Swiper carousel */}
         <Swiper
-          ref={swiperRef}
+          initialSlide={otherProjects.length > 0 ? otherProjects.length + 2 : 0}
           modules={[Navigation, Keyboard, Mousewheel]}
           centeredSlides={true}
           loop={true}
@@ -91,19 +91,19 @@ function ProjectsGrid() {
             prevEl: ".carousel-prev",
             nextEl: ".carousel-next",
           }}
-          onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
+          onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex % otherProjects.length)}
           breakpoints={{
             0: { slidesPerView: 2, spaceBetween: 12 },
             768: { slidesPerView: 5, spaceBetween: 24 },
           }}
         >
-          {otherProjects.map((project, index) => (
-            <SwiperSlide key={project.id}>
+          {loopedProjects.map((project, index) => (
+            <SwiperSlide key={`${project.id}-${index}`} virtualIndex={index}>
               <div
                 className="cursor-pointer transition-all duration-400"
                 style={{
-                  transform: activeSlideIndex === index ? "scale(1)" : "scale(0.85)",
-                  opacity: activeSlideIndex === index ? 1 : 0.6,
+                  transform: activeSlideIndex === (index % otherProjects.length) ? "scale(1)" : "scale(0.85)",
+                  opacity: activeSlideIndex === (index % otherProjects.length) ? 1 : 0.6,
                 }}
                 onClick={() => handleProjectClick(project)}
               >
@@ -116,7 +116,7 @@ function ProjectsGrid() {
                 </div>
                 <div
                   className="transition-opacity duration-400 mt-2 text-center"
-                  style={{ opacity: activeSlideIndex === index ? 1 : 0.6 }}
+                  style={{ opacity: activeSlideIndex === (index % otherProjects.length) ? 1 : 0.6 }}
                 >
                   <h3 className="text-xs 2xl:text-base font-medium text-[#1a1a1a] uppercase tracking-[0.2em]">{project.title}</h3>
                 </div>

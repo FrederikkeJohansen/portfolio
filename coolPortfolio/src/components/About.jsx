@@ -48,16 +48,21 @@ function About() {
                                 Who I Am
                             </h3>
                             <p className="text-[clamp(0.8rem,1.1vw,1.25rem)] font-light text-slate-700 leading-relaxed">
-                                I'm a designer and developer with a passion for creating meaningful
-                                digital experiences. With a background spanning UX research,
-                                interface design, and front-end development, I enjoy working in the
-                                space where people and technology meet.
+                                I’m passionate about UX/UI design, development, and hardware, with a strong interest in creating
+                                meaningful and intuitive solutions. I’m drawn to projects that challenge me to think both
+                                creatively and technically, and I enjoy working across the full process, from early research and
+                                ideation to design and implementation.
                             </p>
                             <p className="text-[clamp(0.8rem,1.1vw,1.25rem)] font-light text-slate-700 leading-relaxed mt-2">
-                                I'm drawn to projects that challenge me to think both creatively and
-                                technically — from wearable prototypes to web applications. I care
-                                about the details, the people using the product, and the story
-                                behind every design decision.
+                                Through my studies, I’ve become comfortable navigating across different technologies,
+                                giving me a broad technical foundation and the ability to quickly learn new tools and frameworks.
+                                I care about the details, the people using the product, and the context in which it is used.
+
+
+                            </p>
+                            <p className="text-[clamp(0.8rem,1.1vw,1.25rem)] font-light text-slate-700 leading-relaxed mt-2">
+                                I’m a curious person with a positive mindset, and I enjoy working closely with others. I thrive in collaborative environments where ideas are shared, challenged, and built together.
+
                             </p>
                         </div>
 
@@ -67,13 +72,15 @@ function About() {
                                 More to Know
                             </h3>
                             <div className="flex flex-wrap items-center text-[clamp(0.8rem,1.1vw,1.25rem)] font-light text-slate-700">
-                                <span>Passionated</span>
-                                <span className="mx-4 text-slate-400">|</span>
-                                <span>Matcha Enthusiast</span>
+                                <span>Creative and Curious</span>
                                 <span className="mx-4 text-slate-400">|</span>
                                 <span>Student Mentor</span>
                                 <span className="mx-4 text-slate-400">|</span>
-                                <span>Something</span>
+                                <span>Matcha Enthusiast</span>
+                                <span className="mx-4 text-slate-400">|</span>
+                                <span>Competitive Dancer</span>
+
+
                             </div>
                         </div>
                     </div>
