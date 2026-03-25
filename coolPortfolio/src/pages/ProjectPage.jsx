@@ -62,7 +62,7 @@ function ProjectPage() {
         <img
           src={project.thumbnail}
           alt={project.title}
-          className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[38rem] object-cover rounded-lg"
+          className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[48rem] object-cover rounded-lg"
         />
       </div>
 
@@ -119,7 +119,7 @@ function ProjectPage() {
                 </h2>
                 <div className="border-b border-slate-300 flex-1 mx-8"></div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[160px] md:auto-rows-[180px] 2xl:auto-rows-[220px]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[160px] md:auto-rows-[200px] lg:auto-rows-[240px] 2xl:auto-rows-[400px]">
                 {project.images.map((img, i) => (
                   <div
                     key={i}

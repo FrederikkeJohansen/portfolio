@@ -42,11 +42,10 @@ function ProjectsGrid() {
                 <img
                   src={project.thumbnail}
                   alt={project.title}
-                  className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[38rem] object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[48rem] object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
-                <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[38rem] bg-[#FBF9FE] flex items-center justify-center">
-                  <span className="text-slate-400 text-base tracking-[0.2em] uppercase">Coming Soon</span>
+                <div className="w-full h-72 md:h-[28rem] lg:h-[32rem] 2xl:h-[48rem] bg-[#FBF9FE] flex items-center justify-center">
                 </div>
               )}
             </div>
@@ -59,7 +58,7 @@ function ProjectsGrid() {
       </div>
 
       {/* All Work Carousel */}
-      <h2 className="uppercase text-center mb-4 text-xl text-slate-700 tracking-[0.2em] mt-20">All Work</h2>
+      <h2 className="uppercase text-center mb-4 text-xl text-slate-700 tracking-[0.2em] mt-20 2xl:mt-32">All Work</h2>
       <div className="relative">
         {/* Navigation arrows */}
         <div className="flex justify-between ">
