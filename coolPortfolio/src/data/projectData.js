@@ -18,11 +18,11 @@ import logoENVAImage from "../assets/projects/LogoENVA/logoEnvaPB.png";
 import PersonalGifts from "../assets/projects/PersonalGifts/personalGiftsPB.png";
 
 import uxImage from "../assets/projects/UXLogbook/uxPB.jpg";
-import ux1 from "../assets/projects/UXLogbook/ux1.jpg";
-import ux2 from "../assets/projects/UXLogbook/ux2.jpg";
-import ux3 from "../assets/projects/UXLogbook/ux3.jpg";
-import ux4 from "../assets/projects/UXLogbook/ux4.jpg";
-import ux6 from "../assets/projects/UXLogbook/ux6.jpg";
+import ux1 from "../assets/projects/UXLogbook/UX1.jpg";
+import ux2 from "../assets/projects/UXLogbook/UX2.jpg";
+import ux3 from "../assets/projects/UXLogbook/UX3.jpg";
+import ux4 from "../assets/projects/UXLogbook/UX4.jpg";
+import ux6 from "../assets/projects/UXLogbook/UX6.jpg";
 
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.jpg";
 import toWoodToGo1 from "../assets/projects/ToWoodToGo/toWoodToGo1.jpg";
