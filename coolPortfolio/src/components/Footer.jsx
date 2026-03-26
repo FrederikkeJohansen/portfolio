@@ -6,7 +6,7 @@ function Footer() {
           Designed and developed by Frederikke Ellen Johansen • Built with React, Tailwind CSS, and DaisyUI • Designed in Figma
         </p>
         <p className="font-light text-xs text-slate-400 italic">
-          Actively maintained. Last updated: January 2026.
+          Actively maintained. Last updated: March 2026.
         </p>
         <div className="text-xs text-slate-400 pt-1">
           © {new Date().getFullYear()} Frederikke Ellen Johansen.
