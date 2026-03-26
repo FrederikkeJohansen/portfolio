@@ -9,7 +9,7 @@ import CSPortfolio7 from "../assets/projects/CSPortfolio/CSPortfolio7.jpg";
 
 import hyperBoxImage from "../assets/projects/HyperBox/hyperBoxPB.jpg";
 import eieioImage from "../assets/projects/EIEIO/eieioPB.png";
-import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/VaerdicentralenPB.png";
+import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/Test.png";
 import designAsImage from "../assets/projects/DesignAs/designAsPB.png";
 import bachelorImage from "../assets/projects/Bachelor/bachelorPB.png";
 import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB.png";
