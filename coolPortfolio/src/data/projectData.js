@@ -9,7 +9,7 @@ import CSPortfolio7 from "../assets/projects/CSPortfolio/CSPortfolio7.jpg";
 
 import hyperBoxImage from "../assets/projects/HyperBox/hyperBoxPB.jpg";
 import eieioImage from "../assets/projects/EIEIO/eieioPB.png";
-import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/vaerdicentralenPB.png";
+import vaerdicentralenImage from "../assets/projects/Vaerdicentralen/VaerdicentralenPB.png";
 import designAsImage from "../assets/projects/DesignAs/designAsPB.png";
 import bachelorImage from "../assets/projects/Bachelor/bachelorPB.png";
 import strainySleevyImage from "../assets/projects/StrainySleevy/strainySleevyPB.png";
@@ -17,12 +17,12 @@ import nightWatchImage from "../assets/projects/NightWatch/nightWatchPB.png";
 import logoENVAImage from "../assets/projects/LogoENVA/logoEnvaPB.png";
 import PersonalGifts from "../assets/projects/PersonalGifts/personalGiftsPB.png";
 
-import uxImage from "../assets/projects/UXLogbook/uxPB.jpg";
-import ux1 from "../assets/projects/UXLogbook/ux1.jpg";
-import ux2 from "../assets/projects/UXLogbook/ux2.jpg";
-import ux3 from "../assets/projects/UXLogbook/ux3.jpg";
-import ux4 from "../assets/projects/UXLogbook/ux4.jpg";
-import ux6 from "../assets/projects/UXLogbook/ux6.jpg";
+import uxImage from "../assets/projects/UXLogbook/UXPB.jpg";
+import ux1 from "../assets/projects/UXLogbook/UX1.jpg";
+import ux2 from "../assets/projects/UXLogbook/UX2.jpg";
+import ux3 from "../assets/projects/UXLogbook/UX3.jpg";
+import ux4 from "../assets/projects/UXLogbook/UX4.jpg";
+import ux6 from "../assets/projects/UXLogbook/UX6.jpg";
 
 import toWoodToGoImage from "../assets/projects/ToWoodToGo/toWoodToGoPB.jpg";
 import toWoodToGo1 from "../assets/projects/ToWoodToGo/toWoodToGo1.jpg";
@@ -31,13 +31,13 @@ import toWoodToGo3 from "../assets/projects/ToWoodToGo/toWoodToGo3.jpg";
 import toWoodToGo4 from "../assets/projects/ToWoodToGo/toWoodToGo4.jpg";
 import toWoodToGo5 from "../assets/projects/ToWoodToGo/toWoodToGo5.png";
 
-import evoliImage from "../assets/projects/Evoli/evoliPB.jpg";
-import evoli2 from "../assets/projects/Evoli/evoli2.jpg";
-import evoli3 from "../assets/projects/Evoli/evoli3.jpg";
-import evoli4 from "../assets/projects/Evoli/evoli4.jpg";
-import evoli5 from "../assets/projects/Evoli/evoli5.jpg";
-import evoli6 from "../assets/projects/Evoli/evoli6.jpg";
-import evoli7 from "../assets/projects/Evoli/evoli7.jpg";
+import evoliImage from "../assets/projects/Evoli/EvoliPB.jpg";
+import evoli2 from "../assets/projects/Evoli/Evoli2.jpg";
+import evoli3 from "../assets/projects/Evoli/Evoli3.jpg";
+import evoli4 from "../assets/projects/Evoli/Evoli4.jpg";
+import evoli5 from "../assets/projects/Evoli/Evoli5.jpg";
+import evoli6 from "../assets/projects/Evoli/Evoli6.jpg";
+import evoli7 from "../assets/projects/Evoli/Evoli7.jpg";
 
 
 export const projects = [
